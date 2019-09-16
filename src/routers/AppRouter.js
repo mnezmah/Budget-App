@@ -1,9 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Link, NavLink, Route, Switch } from 'react-router-dom'
-
-const ExpenseDashboardPage = () => (
-  <div>This is from my dashboard</div>
-)
+import ExpenseDashboardPage from '../components/ExpenseDashboardPage'
 
 const AddExpensePage = () => (
   <div>This is from my Add Expense</div>

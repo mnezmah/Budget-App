@@ -5,17 +5,7 @@ import AddExpensePage from '../components/AddExpensePage'
 import EditExpensePage from '../components/EditExpensePage'
 import HelpPage from '../components/HelpPage'
 import NotFoundPage from '../component/NotFoundPage'
-
-const Header = () => (
-  <header>
-    <h1>Budget App</h1>
-    <NavLink exact to="/" activeClassName="is-active" > Home</NavLink> |
-    <NavLink to="/create" activeClassName="is-active"> Create Expense</NavLink> |
-    <NavLink to="/edit" activeClassName="is-active"> Edit Expense</NavLink> |
-    <NavLink to="/help" activeClassName="is-active"> Help</NavLink>
-
-  </header>
-)
+import Header from '../components/Header'
 
 const AppRouter = () => (
   <BrowserRouter>

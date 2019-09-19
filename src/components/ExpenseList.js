@@ -9,7 +9,7 @@ const ExpenseList= (props) => {
     <div>
    {props.expenses.map(expense => {
      return <ExpenseListItem 
-      key={expense.iod}
+      key={expense.id}
      {...expense}
      />
    })}

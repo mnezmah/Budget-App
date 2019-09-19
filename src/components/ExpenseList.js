@@ -1,12 +1,20 @@
 import React from 'react'
 import { connect} from 'react-redux'
+import ExpenseListItem from './ExpenseListItem'
 
-const ExpenseList= (props) => {
+const ExpenseList= (props) => {    
+  console.log('expenseList prps:', props) 
   return (
     <div>
-    <h1>  Expense List</h1>
-    {props.expenses.length}
-    </div>
+   {props.expenses.map(expense => {
+     return <ExpenseListItem 
+      key={expense.iod}
+      desc={expense.description}
+      amount={expense.amount}
+      createdAt={expense.createdAt}
+     />
+   })}
+   </div>
   )
 }
 

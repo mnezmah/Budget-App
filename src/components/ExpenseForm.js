@@ -8,14 +8,16 @@ const now = moment()
 console.log(now.format('MMM Do, YYYY'))
 
 export default class ExpenseForm extends Component {
-
-  state = {
-    description: '',
-    note: '',
-    amount: '',
-    createdAt: moment(),
-    calendarFocused: false,
-    error: ''
+  constructor(props) {
+    super(props)
+    this.state = {
+      description: props.expense ? props.expense.description : '',
+      note: props.expense ? props.expense.note : '',
+      amount: props.expense ? (props.expense.amount /100 ): '' ,
+      createdAt:props.epense ? moment(props.expense,createdAt): moment(),
+      calendarFocused: false,
+      error: ''
+    }
   }
 
   onDescriptionChange = (e) => {
@@ -45,10 +47,10 @@ export default class ExpenseForm extends Component {
 
   onSubmit = (e) => {
     e.preventDefault()
-    if(!this.state.description || !this.state.amount){
-      this.setState({error: 'Please provide description and amount.'})
+    if (!this.state.description || !this.state.amount) {
+      this.setState({ error: 'Please provide description and amount.' })
     } else {
-      this.setState({ error: ''})
+      this.setState({ error: '' })
       this.props.onSubmit({
         description: this.state.description,
         amount: parseFloat(this.state.amount, 10) * 100,
@@ -62,7 +64,7 @@ export default class ExpenseForm extends Component {
     console.log('STATE:', this.state)
     return (
       <div>
-        {this.state.error && <p>{this.state.error}</p>} 
+        {this.state.error && <p>{this.state.error}</p>}
         <form onSubmit={this.onSubmit}>
           <input
             value={this.state.description}

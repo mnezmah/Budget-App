@@ -1,11 +1,9 @@
 import React from 'react'
 
-const ExpenseListItem = (props) => {
-  const {desc, amount, createdAt} = props
-  console.log('PROPS ARE:', props)
+const ExpenseListItem = ({description, amount, createdAt}) => {
   return (
     <div>
-      <p>{desc} | {amount} | {createdAt}</p>
+      <p>{description} | {amount} | {createdAt}</p>
     </div>
   )
 }

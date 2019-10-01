@@ -3,9 +3,7 @@ import { connect} from 'react-redux'
 import ExpenseListItem from './ExpenseListItem'
 import selectExpenses from '../selectors/expenses'
 
-const ExpenseList= (props) => {    
-  console.log('expenseList prps:', props) 
-  return (
+export const ExpenseList= (props) => {     
     <div>
    {props.expenses.map(expense => {
      return <ExpenseListItem 
@@ -14,7 +12,6 @@ const ExpenseList= (props) => {
      />
    })}
    </div>
-  )
 }
 
 const mapStateToProps = (state) => {

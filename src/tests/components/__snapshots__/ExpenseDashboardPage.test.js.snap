@@ -2,7 +2,7 @@
 
 exports[`should redner ExpenseDashboardPage 1`] = `
 <div>
-  <Connect(ExpenseListFilter) />
+  <Connect(ExpenseListFilters) />
   <Connect(ExpenseList) />
 </div>
 `;

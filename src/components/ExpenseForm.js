@@ -60,7 +60,6 @@ export default class ExpenseForm extends Component {
   }
 
   render() {
-    console.log('STATE:', this.state)
     return (
       <div>
         {this.state.error && <p>{this.state.error}</p>}

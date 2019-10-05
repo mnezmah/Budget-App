@@ -7,9 +7,9 @@ const filters = {
   endDate: undefined
 }
 
-const altfilters = {
+const altFilters = {
   text: 'bills',
-  sortBy: amound,
+  sortBy: amount,
   startDate: moment(0),
   endDate: moment(0).add(3, 'days')
 }

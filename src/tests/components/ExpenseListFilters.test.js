@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { filters, altFilters } from '../fixtures/expenses'
+import { filters, altFilters } from '../fixtures/filters'
 import { ExpenseListFilters } from '../../components/ExpenseListFilters'
 
 let setTextFilter, sortByDate, sortByAmount, setStartDate, setEndDate, wrapper
@@ -25,4 +25,11 @@ beforeEach(() => {
 
 test('should render ExpenseListFilters correctly', () => {
   expect(wrapper).toMatchSnapshot();
+})
+
+test('should render ExpenseListFilters with alt data correctly', () => {
+  wrapper.setProps({
+    filters: altFilters
+  })
+  expect(wrapper).toMatchSnapshot()
 })

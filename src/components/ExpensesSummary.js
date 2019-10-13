@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import numeral from 'numeral'
-import total from '../selectors/expenses-total'
 import selectExpenses from '../selectors/expenses'
 import selectExpensesTotal from '../selectors/expenses-total'
 
